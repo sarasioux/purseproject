@@ -1,3 +1,8 @@
+//   ___, __   _, ___,   ____  ____,
+//  (-|_)(-|  |  (-|_)  (-(__`(-|_,
+//   _|    |__|_, _| \_, ____) _|__,
+//  (            (      (     (
+//
 // SPDX-License-Identifier: MIT
 
 pragma solidity >=0.8.0 <0.9.0;
@@ -116,7 +121,8 @@ contract Purse is ERC721Enumerable, ReentrancyGuard, Ownable {
     "Pendant",
     "Choker",
     "Collar",
-    "Long Necklaces"
+    "Long Necklaces",
+    "Gold Necklace"
     ];
 
     string[] private rings = [

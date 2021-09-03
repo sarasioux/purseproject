@@ -1,4 +1,4 @@
-# purse
+# Purse Project
 
 ## Project setup
 ```

@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <div class="has-text-centered has-text-grey is-size-5">This website is <a>open source</a>.</div>
+        <div class="has-text-centered has-text-grey is-size-5">This website is <a href="https://github.com/sarasioux/purseproject" target="_blank">open source</a>.</div>
     </div>
 
 </template>
@@ -105,14 +105,13 @@
           this.account = accounts.result[0];
           let networkId = await this.$web3.eth.net.getId();
           switch (networkId) {
-            case 42:
-            case 5777:
+            case 1:
               await this.initContracts();
               this.connectionInProgress = false;
               this.isConnected = true;
-              break;
             default:
-              alert('Please connect to the Kovan test network.');
+              //alert('Please connect to Mainnet.');
+              alert('Contract hasn\'t launched yet.');
           }
         } catch (error) {
           console.log('error', error);
