@@ -109,6 +109,8 @@
               await this.initContracts();
               this.connectionInProgress = false;
               this.isConnected = true;
+              alert('Contract hasn\'t launched yet.');
+              break;
             default:
               //alert('Please connect to Mainnet.');
               alert('Contract hasn\'t launched yet.');
