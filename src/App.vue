@@ -7,14 +7,7 @@
                         Purse
                     </h1>
                 </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
             </div>
-
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
                 </div>
@@ -27,6 +20,11 @@
                 </div>
             </div>
         </nav>
+
+        <div class="is-hidden-table has-text-centered">
+            <button class="button is-primary is-hidden-tablet" @click="connectWeb3" v-if="!isConnected">Connect</button>
+            <button class="button is-primary is-hidden-tablet" @click="claimPurse" v-if="isConnected">Claim</button>
+        </div>
 
         <div class="section has-text-centered">
             <h1 class="title is-huge has-text-white cursive has-text-primary">Purse</h1>
