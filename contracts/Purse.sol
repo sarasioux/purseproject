@@ -100,7 +100,10 @@ contract Purse is ERC721Enumerable, ReentrancyGuard, Ownable {
     "Smart Watch",
     "Ballet Flats",
     "Strappy Sandals",
-    "Bangles"
+    "Bangles",
+    "Aviator Sunglasses",
+    "Giant Sunglasses",
+    "Drug Store Sunglasses"
     ];
 
     string[] private sex = [
@@ -288,7 +291,7 @@ contract Purse is ERC721Enumerable, ReentrancyGuard, Ownable {
     }
 
     function ownerClaim(uint256 tokenId) public nonReentrant onlyOwner {
-        require(tokenId > 7777 && tokenId < 8001, "Token ID invalid");
+        require(tokenId > 7777 && tokenId < 8009, "Token ID invalid");
         _safeMint(owner(), tokenId);
     }
 

@@ -30,14 +30,22 @@
 
         <div class="section has-text-centered">
             <h1 class="title is-huge has-text-white cursive has-text-primary">Purse</h1>
-            <div class="tabs is-centered is-large">
+            <div class="tabs is-centered is-large is-hidden-mobile">
                 <ul>
-                    <li><a class="has-text-white cursive is-size-3">Open Sea</a></li>
+                    <li><a class="has-text-white cursive is-size-3" href="https://opensea.io/collection/purse" target="_blank">Open Sea</a></li>
                     <li><a class="has-text-white cursive is-size-3" href="https://discord.gg/rGVWGRwApV" target="_blank">Discord</a></li>
                     <li><a class="has-text-white cursive is-size-3" href="https://twitter.com/purse_project" target="_blank">Twitter</a></li>
-                    <li><a class="has-text-white cursive is-size-3">Contract</a></li>
+                    <li><a class="has-text-white cursive is-size-3" href="https://etherscan.io/address/0xdfab2cd7b7efe3cfb6a09235ba8ec895eaedf062" target="_blank">Contract</a></li>
                 </ul>
             </div>
+            <aside class="menu is-hidden-tablet">
+                <ul class="menu-list">
+                    <li><a class="has-text-white cursive is-size-3" href="https://opensea.io/collection/purse" target="_blank">Open Sea</a></li>
+                    <li><a class="has-text-white cursive is-size-3" href="https://discord.gg/rGVWGRwApV" target="_blank">Discord</a></li>
+                    <li><a class="has-text-white cursive is-size-3" href="https://twitter.com/purse_project" target="_blank">Twitter</a></li>
+                    <li><a class="has-text-white cursive is-size-3" href="https://etherscan.io/address/0xdfab2cd7b7efe3cfb6a09235ba8ec895eaedf062" target="_blank">Contract</a></li>
+                </ul>
+            </aside>
             <p class="has-text-grey has-text-weight-medium is-size-5">
                 Purse is randomized lady gear generated and stored on chain.<br />
                 Stats, images, and other functionality are intentionally omitted for others to interpret.<br />
@@ -109,11 +117,9 @@
               await this.initContracts();
               this.connectionInProgress = false;
               this.isConnected = true;
-              alert('Contract hasn\'t launched yet.');
               break;
             default:
-              //alert('Please connect to Mainnet.');
-              alert('Contract hasn\'t launched yet.');
+              alert('Please connect to mainnet and make sure your web3 browser is working.');
           }
         } catch (error) {
           console.log('error', error);
